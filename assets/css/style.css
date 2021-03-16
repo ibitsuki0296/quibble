@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+* {
+  color: #222;
+}
+
+/* 汎用要素 */
+a {
+  color: #666;
+  text-decoration: underline;
+}
+
+.button {
+  border: 1px solid #222;
+  background: rgba(25,25,25,0.2);
+  color: #fff;
+  padding: 1em 1.2em;
+  display: inline-block;
+}
+
+/* トップ（index） */
+.top-wrapper {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top {
+  color: #fff;
+}
+
+.left-side {
+  background: rgba(25,25,25,0.6);
+  padding-left: 190px;
+  margin-left: -190px;
+  transform: skewX(-20deg);
+  width: 80vw;
+}
+
+.top.site-title {
+  transform: skewX(20deg);
+  display: flex;
+}
+
+.site-title {
+  font-size: 6em;
+  margin: 2rem auto;
+}
+
+.top.button {
+  transform: skewX(20deg);
+}
+
+.right-side {
+  background: rgba(204,204,204,0.6);
+  transform: skewX(-20deg);
+  padding-right: 30vw;
+  margin-right: -30vw;
+}
+
+.lead {
+  transform: skewX(20deg);
+  margin: 80vh 0 0;
+}
