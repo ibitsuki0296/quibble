@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
+/* 汎用要素 */
 * {
   color: #222;
 }
 
-/* 汎用要素 */
 a {
   color: #666;
   text-decoration: underline;
