@@ -12,7 +12,7 @@ a {
 
 .button {
   border: 1px solid #222;
-  background: rgba(25,25,25,0.2);
+  background: rgba(25,25,25,0.5);
   color: #fff;
   padding: 0.8rem 1.2rem;
   display: block;
@@ -41,7 +41,7 @@ a {
   color: #fff;
 }
 
-.left-side {
+.top.left-side {
   background-color: rgba(25,25,25,0.6);
   padding-left: 190px;
   margin-left: -190px;
@@ -49,18 +49,16 @@ a {
   width: 80vw;
 }
 
-.top.site-title {
+.top .site-title {
   transform: skewX(20deg);
   display: flex;
   justify-content: center;
-}
-
-.site-title {
   font-size: 6em;
+  color: #fff;
   margin: 8rem auto;
 }
 
-.top.button {
+.top .button {
   transform: skewX(20deg);
   width: 10rem;
   margin: 5rem auto 1rem;
@@ -68,7 +66,7 @@ a {
   text-decoration: none;
 }
 
-.right-side {
+.top.right-side {
   background-color: rgba(204,204,204,0.6);
   transform: skewX(-20deg);
   padding-right: 30vw;
@@ -80,4 +78,34 @@ a {
   margin-top: 80vh;
   margin-left: 3rem;
   font-size: 1.5rem;
+}
+
+/* サイドバー */
+.sidebar {
+  height: 100vh;
+  background:
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px);
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+.side-wrapper {
+  position: fixed;
+  height: 100vh;
+  transform: skewX(-20deg);
+  width: 40vw;
+  padding-left: 190px;
+  margin-left: -190px;
+  background-color: rgba(25,25,25,0.6);
+}
+
+.side-wrapper > * {
+  transform: skewX(20deg);
+}
+
+.side-wrapper .site-title a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 3rem;
 }
