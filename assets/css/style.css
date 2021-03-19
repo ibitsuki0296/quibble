@@ -14,12 +14,24 @@ a {
   border: 1px solid #222;
   background: rgba(25,25,25,0.2);
   color: #fff;
-  padding: 1em 1.2em;
-  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  display: block;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background: #fff;
+  color: #222;
 }
 
 /* トップ（index） */
 .top-wrapper {
+  background:
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px);
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -30,7 +42,7 @@ a {
 }
 
 .left-side {
-  background: rgba(25,25,25,0.6);
+  background-color: rgba(25,25,25,0.6);
   padding-left: 190px;
   margin-left: -190px;
   transform: skewX(-20deg);
@@ -40,25 +52,32 @@ a {
 .top.site-title {
   transform: skewX(20deg);
   display: flex;
+  justify-content: center;
 }
 
 .site-title {
   font-size: 6em;
-  margin: 2rem auto;
+  margin: 8rem auto;
 }
 
 .top.button {
   transform: skewX(20deg);
+  width: 10rem;
+  margin: 5rem auto 1rem;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 .right-side {
-  background: rgba(204,204,204,0.6);
+  background-color: rgba(204,204,204,0.6);
   transform: skewX(-20deg);
   padding-right: 30vw;
   margin-right: -30vw;
 }
 
-.lead {
+.top .lead {
   transform: skewX(20deg);
-  margin: 80vh 0 0;
+  margin-top: 80vh;
+  margin-left: 3rem;
+  font-size: 1.5rem;
 }
