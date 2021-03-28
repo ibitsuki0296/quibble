@@ -25,6 +25,16 @@ a {
   color: #222;
 }
 
+/* 取り消し線 */
+.line-through {
+  text-decoration: line-through;
+}
+
+.lead {
+  margin: -0.2rem 0.2rem;
+  font-size: 0.9rem;
+}
+
 /* トップ（index） */
 .top-wrapper {
   background:
@@ -122,18 +132,54 @@ a {
   margin: 0.3rem 0;
 }
 
+.sns-list {
+  display: flex;
+  list-style: none;
+}
+
+.sns-list li a i {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
 /* コンテンツ部分 */
 .wrapper {
   display: flex;
   justify-content: space-evenly;
   background:
-    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
-    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px);
+    linear-gradient(45deg, transparent 74px, transparent 75px, #c0c0c0 75px, #c0c0c0 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #c0c0c0 76px, #c0c0c0 77px, transparent 78px, transparent 109px);
   background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  background-color: rgba(256,256,256,0.6)
+  background-color: rgba(245,245,245,0.5)
 }
 
 .wrapper .right-side {
   width: 60vw;
+}
+
+.contents {
+  margin: 1rem 0.2rem;
+  width: 90%;
+}
+
+.contents_h1 {
+  font-size: 2rem;
+  color: #666;
+  position: relative;
+}
+
+.contents_h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  background: rgba(204,204,204,0.6);
+  height: 5px;
+  width: 90%;
+}
+
+.contents_p {
+  margin: 1.2rem 0.6rem;
 }

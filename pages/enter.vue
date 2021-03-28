@@ -3,8 +3,20 @@
     <Sidebar />
     <div class="right-side">
       <h1 class="contents_h1">TOP</h1>
-    </div>
-  </div>
+      <p class="lead">もし入れる必要があったらリード文</p>
+      <div class="contents">
+        <p class="contents_p">
+          今日も紅茶が美味しい国の住人です。などの文章が入ります。<br />
+          ただの改行と、<br />
+          <span class="line-through">取り消し線はこんなかんじ</span><br />
+          取り消し線のあとに改行入れる場合は＜BR /＞入れてあげてください。
+        </p>
+        <p class="contents_p">
+          段落の改行はこんなかんじで。長い文章は端までいくとさらっと次の行にいきます。一応一番端はこのくらいの文章量。ただしデバイスによって変わります。ちゃんとレスポンシブには対応しました。リキッドじゃなくてごめん。リキッドはデザイン的に厳しそうだったから諦めた。
+        </p>
+      </div><!-- contents -->
+    </div><!-- right-side -->
+  </div><!-- wrapper -->
 </template>
 <script>
 export default {
