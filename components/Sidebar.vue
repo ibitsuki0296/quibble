@@ -5,8 +5,12 @@
         <NuxtLink to="/">ああ言えば、<br />こう言う。</NuxtLink>
       </div>
       <nav>
-        <ul>
+        <ul class="global-nav">
           <li><NuxtLink to="/enter">TOP</NuxtLink></li>
+          <li><NuxtLink to="/about">ABOUT</NuxtLink></li>
+          <li><NuxtLink to="/works">WORKS</NuxtLink></li>
+          <li><NuxtLink to="/link">LINK</NuxtLink></li>
+          <li><NuxtLink to="/mail">MAIL</NuxtLink></li>
         </ul>
       </nav>
       <ul class="sns-list">

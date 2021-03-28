@@ -56,6 +56,7 @@ a {
   font-size: 6em;
   color: #fff;
   margin: 8rem auto;
+  line-height: 1.2;
 }
 
 .top .button {
@@ -83,17 +84,13 @@ a {
 /* サイドバー */
 .sidebar {
   height: 100vh;
-  background:
-    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
-    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px);
-  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
-  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  width: 40vw;
 }
 
 .side-wrapper {
   position: fixed;
   height: 100vh;
-  transform: skewX(-20deg);
+  transform: skewX(-15deg);
   width: 40vw;
   padding-left: 190px;
   margin-left: -190px;
@@ -101,11 +98,42 @@ a {
 }
 
 .side-wrapper > * {
-  transform: skewX(20deg);
+  transform: skewX(15deg);
 }
 
 .side-wrapper .site-title a {
   color: #fff;
   text-decoration: none;
   font-size: 3rem;
+  line-height: 1.2;
+  margin: 3rem 0;
+  display: block;
+}
+
+.global-nav {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.global-nav li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 0.3rem 0;
+}
+
+/* コンテンツ部分 */
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  background:
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px);
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  background-color: rgba(256,256,256,0.6)
+}
+
+.wrapper .right-side {
+  width: 60vw;
 }
