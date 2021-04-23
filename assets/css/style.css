@@ -137,10 +137,14 @@ a {
   list-style: none;
 }
 
+.sns-list li {
+  margin: 0 0.3rem;
+}
+
 .sns-list li a i {
   text-decoration: none;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* コンテンツ部分 */
@@ -178,6 +182,11 @@ a {
   background: rgba(204,204,204,0.6);
   height: 5px;
   width: 90%;
+}
+
+.contents_h2 {
+  font-size: 1.8rem;
+  color: #666;
 }
 
 .contents_p {

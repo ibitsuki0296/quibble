@@ -15,6 +15,8 @@
       </nav>
       <ul class="sns-list">
         <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
       </ul>
     </div>
   </div>
