@@ -9,3 +9,17 @@
     </div><!-- right-side -->
   </div><!-- top-wrapper -->
 </template>
+<script>
+export default {
+  head() {
+    return {
+      titleTemplate: null,
+      title: 'ああ言えば、こう言う。',
+      meta: [
+        { hid: 'og:url', property: 'og:url', content: `${process.env.baseUrl}` },
+        { hid: 'og:image', property: 'og:image', content: `${process.env.baseUrl}/img/og-img.jpg` },
+      ],
+    }
+  },
+}
+</script>

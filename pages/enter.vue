@@ -20,6 +20,19 @@
   </div><!-- wrapper -->
 </template>
 <script>
+import Meta from '~/assets/mixins/meta'
 export default {
+  mixins: [Meta],
+  data(){
+    return {
+      title: 'TOP',
+      meta: {
+        title: 'TOP',
+        description: '紅茶が美味しい国の住人のページ。',
+        url: '/enter',
+        image: '/og_img.jpg',
+      },
+    }
+  },
 }
 </script>
