@@ -13,6 +13,7 @@ export default {
       { hid: 'description', name: 'description', content: 'デフォルトの説明文が入ります。' },
       { hid: 'og:title', property: 'og:title', content: 'ああ言えば、こう言う。' },
       { hid: 'og:description', property: 'og:description', content: 'デフォルトの説明文が入ります。' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
     ],
     script:[
       { src: 'https://kit.fontawesome.com/bb1405746d.js' }

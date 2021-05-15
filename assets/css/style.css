@@ -3,6 +3,7 @@
 /* 汎用要素 */
 * {
   color: #222;
+  line-height: 1.6;
 }
 
 a {
@@ -161,6 +162,7 @@ a {
 
 .wrapper .right-side {
   width: 60vw;
+  margin: 1.5rem 0;
 }
 
 .contents {
@@ -172,23 +174,66 @@ a {
   font-size: 2rem;
   color: #666;
   position: relative;
+  font-weight: 400;
 }
 
-.contents_h1::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -1rem;
-  background: rgba(204,204,204,0.6);
-  height: 5px;
-  width: 90%;
+.contents_h1::first-letter {
+  color: #222;
+  font-weight: 900;
 }
 
 .contents_h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
   color: #666;
+  border-bottom: double 4px rgba(0, 0, 0, 0.6);
 }
 
 .contents_p {
   margin: 1.2rem 0.6rem;
+}
+
+.list_dl {
+  margin: 1.2rem 0.6rem;
+}
+
+.list_dl dt, .record_dl dt time {
+  margin: 0.4rem;
+  padding: 0.2rem;
+}
+
+.list_dl dt {
+  border-left: 4px double rgba(0, 0, 0, 0.6);
+}
+
+.list_dl dt::first-letter {
+  color: #666;
+}
+
+.list_dl dd {
+  margin-top: -2.05rem;
+  margin-left: 7rem;
+}
+
+/* 更新履歴 */
+.record_title {
+  font-weight: 400;
+  color: #666;
+  text-align: center;
+  font-size: 1.5rem;
+  border-left: 4px double rgba(0, 0, 0, 0.6);
+  border-right: 4px double rgba(0, 0, 0, 0.6);
+}
+
+.record_dl {
+  margin: 1.2rem;
+}
+
+.record_dl dt {
+  text-decoration: underline;
+}
+
+.record_dl dd {
+  margin-top: -1.65rem;
+  margin-left: 8rem;
 }
