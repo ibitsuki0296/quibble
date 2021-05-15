@@ -16,9 +16,9 @@
           段落の改行はこんなかんじで。長い文章は端までいくとさらっと次の行にいきます。一応一番端はこのくらいの文章量。ただしデバイスによって変わります。ちゃんとレスポンシブには対応しました。リキッドはデザイン的に厳しそうだったから諦めた。
         </p>
         <h2 class="record_title">CHANGE LOG</h2>
-        <dl class="record_dl">
-          <dt><time>2021-03-15</time></dt>
-          <dd>制作開始</dd>
+        <dl class="record_dl" v-for="novel in novels" :key="novel.slug">
+          <dt><time v-text="$dateFns.format(new Date(novel.date), 'yyyy-MM-dd')" /></dt>
+          <dd><NuxtLink :to="'novels/'+novel.slug">{{ novel.title }}</NuxtLink></dd>
         </dl>
       </div><!-- contents -->
     </div><!-- right-side -->
@@ -39,5 +39,11 @@ export default {
       },
     }
   },
+  async asyncData({ $content, params }){
+    const novels = await $content('novels', params.slug).sortBy('date', 'desc').limit(5).fetch()
+    return {
+      novels
+    }
+  }
 }
 </script>

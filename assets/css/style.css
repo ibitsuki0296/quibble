@@ -237,3 +237,27 @@ a {
   margin-top: -1.65rem;
   margin-left: 8rem;
 }
+
+/* novelsの単独ページ */
+
+.container {
+  background: rgba(255,255,255,0.8);
+  width: 90%;
+  line-height: 1.7;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.container p {
+  margin: 1.2rem 0.6rem;
+}
+
+.container h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.container h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}

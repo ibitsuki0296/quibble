@@ -23,5 +23,10 @@ export default {
     ],
   },
   css: ['~/assets/css/reset.css', '~/assets/css/style.css'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/date-fns'
+  ],
   components: true,
+  content: {},
 }
