@@ -129,8 +129,13 @@ a {
 .global-nav li a {
   color: #fff;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   margin: 0.3rem 0;
+}
+
+.global-nav li a:hover {
+  opacity: 0.6;
+  text-decoration: line-through;
 }
 
 .sns-list {
@@ -157,7 +162,8 @@ a {
     linear-gradient(-45deg, transparent 75px, transparent 76px, #c0c0c0 76px, #c0c0c0 77px, transparent 78px, transparent 109px);
   background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  background-color: rgba(245,245,245,0.5)
+  background-color: rgba(245,245,245,0.5);
+  min-height: 100vh;
 }
 
 .wrapper .right-side {
@@ -193,11 +199,20 @@ a {
   margin: 1.2rem 0.6rem;
 }
 
+.contents_ul {
+  list-style: none;
+  display: flex;
+}
+
+.contents_ul li {
+  margin: 0 1rem;
+}
+
 .list_dl {
   margin: 1.2rem 0.6rem;
 }
 
-.list_dl dt, .record_dl dt time {
+.list_dl dt, .log_dl div dt time {
   margin: 0.4rem;
   padding: 0.2rem;
 }
@@ -216,36 +231,72 @@ a {
 }
 
 /* 更新履歴 */
-.record_title {
+.log_title {
   font-weight: 400;
   color: #666;
   text-align: center;
   font-size: 1.5rem;
+  background: #fff;
   border-left: 4px double rgba(0, 0, 0, 0.6);
   border-right: 4px double rgba(0, 0, 0, 0.6);
 }
 
-.record_dl {
+.log_dl {
   margin: 1.2rem;
 }
 
-.record_dl dt {
-  text-decoration: underline;
+.log_dl div {
+  margin: 0 0 0.5rem;
 }
 
-.record_dl dd {
+.log_dl div dt {
+  position: relative;
+  padding-left: 0.5rem;
+  width: 8rem;
+}
+
+.log_dl div dt::before {
+  position: absolute;
+  left: -0.5rem;
+  top: 0.3rem;;
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 50%;
+}
+
+.log_dl div dd {
   margin-top: -1.65rem;
-  margin-left: 8rem;
+  margin-left: 10rem;
+}
+
+.log_link:hover {
+  opacity: 0.7;
 }
 
 /* novelsの単独ページ */
 
 .container {
   background: rgba(255,255,255,0.8);
-  width: 90%;
+  width: 80%;
   line-height: 1.7;
   margin: 1rem 0;
   padding: 1rem;
+}
+
+.bread {
+  list-style: none;
+  display: flex;
+}
+
+.bread li {
+  padding: 0 0.2rem 0 0;
+}
+
+.bread li:not(:last-child)::after {
+  content: "＞";
+  padding-left: 0.3rem;
 }
 
 .container p {
@@ -260,4 +311,14 @@ a {
 .container h3 {
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination li {
+  margin: 1rem 2.5rem;
 }

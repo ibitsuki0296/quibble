@@ -15,10 +15,16 @@
         <p class="contents_p">
           段落の改行はこんなかんじで。長い文章は端までいくとさらっと次の行にいきます。一応一番端はこのくらいの文章量。ただしデバイスによって変わります。ちゃんとレスポンシブには対応しました。リキッドはデザイン的に厳しそうだったから諦めた。
         </p>
-        <h2 class="record_title">CHANGE LOG</h2>
-        <dl class="record_dl" v-for="novel in novels" :key="novel.slug">
-          <dt><time v-text="$dateFns.format(new Date(novel.date), 'yyyy-MM-dd')" /></dt>
-          <dd><NuxtLink :to="'novels/'+novel.slug">{{ novel.title }}</NuxtLink></dd>
+        <p class="contents_p">
+          更新履歴はディレクトリ「content/novels」内にある.mdを日付降順で5件取得します。<br />
+          日付：タイトルでタイトルにリンクがはってあって適宜とべます。
+        </p>
+        <h2 class="log_title">CHANGE LOG</h2>
+        <dl class="log_dl">
+          <div v-for="novel in novels" :key="novel.slug">
+            <dt><time v-text="$dateFns.format(new Date(novel.date), 'yyyy-MM-dd')" /></dt>
+            <dd><NuxtLink :to="'/novels/'+novel.slug" class="log_link">{{ novel.title }}</NuxtLink></dd>
+          </div>
         </dl>
       </div><!-- contents -->
     </div><!-- right-side -->

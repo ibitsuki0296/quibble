@@ -3,6 +3,7 @@ date: 2021-03-28
 title: たとえばの日
 description: たとえばの小説その1です。
 slug: ex1
+image: /og-img.jpg
 ---
 これはもともとMarkDownで書かれています。  
 改行する時半スペ2つ入れることを忘れがちです。

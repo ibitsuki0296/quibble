@@ -1,8 +1,25 @@
 <template>
   <div class="wrapper">
     <div class="container">
+      <ol class="bread">
+        <li><NuxtLink to="/enter">TOP</NuxtLink></li>
+        <li><NuxtLink to="/works">WORKS</NuxtLink></li>
+        <li>here</li>
+      </ol>
       <h1 class="contents_h1">{{ novel.title }}</h1>
       <nuxt-content :document="novel" />
+      <ul class="pagination">
+        <li v-if="prev">
+          <NuxtLink :to="{ params: { slug: prev.slug } }">
+             ＜＜ {{ prev.title }}
+          </NuxtLink>
+        </li>
+        <li v-if="next">
+          <NuxtLink :to="{ params: { slug: next.slug } }">
+            {{ next.title }} ＞＞
+          </NuxtLink>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -10,7 +27,16 @@
 export default {
   async asyncData({ $content, params }){
     const novel = await $content('novels', params.slug).fetch()
-    return { novel }
+    const [prev,next] = await $content('novels')
+      .only(['title', 'slug'])
+      .sortBy('date','asc')
+      .surround(params.slug)
+      .fetch()
+    return {
+      novel,
+      prev,
+      next
+    }
   },
   head () {
     const title = this.novel.title
