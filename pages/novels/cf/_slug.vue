@@ -26,8 +26,8 @@
 <script>
 export default {
   async asyncData({ $content, params }){
-    const novel = await $content('novels', params.slug).fetch()
-    const [prev,next] = await $content('novels')
+    const novel = await $content('novels/cf', params.slug).fetch()
+    const [prev,next] = await $content('novels/cf')
       .only(['title', 'slug'])
       .sortBy('date','asc')
       .surround(params.slug)

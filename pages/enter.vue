@@ -23,7 +23,7 @@
         <dl class="log_dl">
           <div v-for="novel in novels" :key="novel.slug">
             <dt><time v-text="$dateFns.format(new Date(novel.date), 'yyyy-MM-dd')" /></dt>
-            <dd><NuxtLink :to="'/novels/'+novel.slug" class="log_link">{{ novel.title }}</NuxtLink></dd>
+            <dd><NuxtLink :to="novel.path" class="log_link">{{ novel.title }}</NuxtLink></dd>
           </div>
         </dl>
       </div><!-- contents -->
@@ -46,7 +46,7 @@ export default {
     }
   },
   async asyncData({ $content, params }){
-    const novels = await $content('novels', params.slug).sortBy('date', 'desc').limit(5).fetch()
+    const novels = await $content('novels', params.slug,{deep:true}).sortBy('date', 'desc').limit(5).fetch()
     return {
       novels
     }
