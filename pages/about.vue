@@ -21,6 +21,22 @@
           <dt>Features</dt>
           <dd>セルフレームの眼鏡を愛用中。<br />休日はゲームをしている。</dd>
         </dl>
+        <h2 class="contents_h2">CAUTION!</h2>
+        <p class="contents_p">
+          このサイトにはこっそりとBL・成人向けのコンテンツがあります。<br />
+          18歳未満の方・苦手な方はご注意ください。<br />
+          問題ない方はサイトのどこかにあるスイッチをオンにしてご覧ください。
+        </p>
+        <div class="switch">
+          <label class="switch_label">
+            <input type="checkbox" class="switch_input" v-model="checked" true-value="kidding?" false-value="" />
+            <span class="switch_content"></span>
+            <span class="switch_circle"></span>
+          </label>
+          <label for="switch_input">
+            <NuxtLink class="fulffy" to="/dark">{{ checked }}</NuxtLink>
+          </label>
+        </div>
       </div><!-- contents -->
     </div><!-- right-side -->
   </div><!-- wrapper -->
@@ -38,6 +54,7 @@ export default {
         url: '/about',
         image: '/og_img.jpg',
       },
+      checked: '',
     }
   },
 }

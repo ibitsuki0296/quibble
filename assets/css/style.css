@@ -371,6 +371,68 @@ a {
   margin: 1rem;
 }
 
+/* 切り替えスイッチ */
+.switch_label {
+	width: 37px;
+	position: relative;
+	display: inline-block;
+	padding-top: 3px;
+}
+.switch_content {
+	display: block;
+  cursor: pointer;
+  position: relative;
+  border-radius: 7px;
+  height: 14px;
+  background-color: rgba(34,31,31,.26);
+  transition: all .1s .4s;
+	overflow: hidden;
+}
+
+.switch_content:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 7px;
+  transition: all .5s;
+}
+.switch_input {
+	display: none;
+}
+.switch_circle {
+	display: block;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+  border-radius: 10px;
+	background-color: #F1F1F1;
+  transition: all .5s;
+  box-shadow: 0 2px 2px #ccc;
+}
+.switch_input:checked ~ .switch_circle {
+	left: 18px;
+	background-color: #444;
+}
+.switch_input:checked ~ .switch_content {
+	border-color: transparent;
+  transition: all 0s;
+}
+
+.switch_input:checked ~ .switch_content:after {
+	background-color: rgba(30,30,30,0.5);
+	width: 100%;
+}
+
+.fulffy {
+  transition: 0.5s;
+}
+
 @media screen and (max-width: 600px){
   .top-wrapper {
     flex-direction: column;

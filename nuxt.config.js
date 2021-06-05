@@ -19,8 +19,7 @@ export default {
       { src: 'https://kit.fontawesome.com/bb1405746d.js' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
   },
   css: ['~/assets/css/reset.css', '~/assets/css/style.css'],
@@ -30,4 +29,5 @@ export default {
   ],
   components: true,
   content: {},
+  target: 'static',
 }
