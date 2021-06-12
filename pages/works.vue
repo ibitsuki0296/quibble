@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <Sidebar />
+    <Sidebar v-show="hiddenbox" />
     <div class="right-side">
-      <span class="sp-only">▼</span>
+      <input type="checkbox" id="hiddenbox" /><label for="hiddenbox" class="sp-only toggle-button">▼</label>
       <h1 class="contents_h1">WORKS</h1>
       <p class="lead">作品一覧です。</p>
       <div class="contents">
