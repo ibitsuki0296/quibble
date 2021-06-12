@@ -2,6 +2,7 @@
   <div class="wrapper">
     <Sidebar />
     <div class="right-side">
+      <span class="sp-only">▼</span>
       <h1 class="contents_h1">TOP</h1>
       <p class="lead">もし入れる必要があったらリード文</p>
       <div class="contents">

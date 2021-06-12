@@ -2,6 +2,7 @@
   <div class="wrapper">
     <Sidebar />
     <div class="right-side">
+      <span class="sp-only">▼</span>
       <h1 class="contents_h1">LINK</h1>
       <div class="contents">
         <p class="contents_p">

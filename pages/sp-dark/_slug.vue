@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper-dark">
     <div class="container">
       <ol class="bread">
         <li><NuxtLink to="/enter">TOP</NuxtLink></li>

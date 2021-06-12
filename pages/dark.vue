@@ -2,6 +2,7 @@
   <div class="wrapper dark">
     <Sidebar />
     <div class="right-side">
+      <span class="sp-only">▼</span>
       <h1 class="contents_h1">WORKS</h1>
       <p class="lead">BLなどの作品一覧です。</p>
       <div class="contents">
