@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <Sidebar />
+    <Sidebar :class="{'on': isActive}" />
     <div class="right-side">
-      <span class="sp-only">▼</span>
+      <span @click="toggle" class="sp-only toggle-button">▼</span>
       <h1 class="contents_h1">ABOUT</h1>
       <div class="contents">
         <p class="contents_p">
@@ -56,6 +56,12 @@ export default {
         image: '/og_img.jpg',
       },
       checked: '',
+      isActive: false,
+    }
+  },
+  methods: {
+    toggle(){
+      this.isActive = !this.isActive
     }
   },
 }

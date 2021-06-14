@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <Sidebar v-show="hiddenbox" />
+    <Sidebar :class="{'on': isActive}" />
     <div class="right-side">
-      <input type="checkbox" id="hiddenbox" /><label for="hiddenbox" class="sp-only toggle-button">▼</label>
+      <span @click="toggle" class="sp-only toggle-button">▼</span>
       <h1 class="contents_h1">WORKS</h1>
       <p class="lead">作品一覧です。</p>
       <div class="contents">
@@ -62,6 +62,12 @@ export default {
         url: '/works',
         image: '/og_img.jpg',
       },
+      isActive: false,
+    }
+  },
+  methods: {
+    toggle(){
+      this.isActive = !this.isActive
     }
   },
   async asyncData({ $content, params }){

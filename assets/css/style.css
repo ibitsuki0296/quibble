@@ -161,6 +161,7 @@ a {
 
 /* コンテンツ部分 */
 .wrapper {
+  z-index: -99;
   display: flex;
   justify-content: space-evenly;
   background:
@@ -462,6 +463,10 @@ a {
 
 
 @media screen and (max-width: 600px){
+  *,*::before,*::after {
+    box-sizing: content-box;
+  }
+
   .pc-only {
     display: none;
   }
@@ -507,12 +512,51 @@ a {
   }
 
   .sidebar {
-    width: 100vw;
-    display: none;
+    transform: translateX(-90vw);
+    transition: 0.5s;
+    width: auto;
+    height: 100%;
+  }
+
+  .side-wrapper {
+    transform: skewX(0);
   }
 
   .sidebar.on {
-    display: block;
+    transition: 0.5s;
+    transform: translateX(0);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .on > .side-wrapper {
+    width: 90vw;
+    margin-left: 0;
+    padding-left: 0;
+    z-index: 2;
+    background: rgba(25,25,25,0.8);
+  }
+
+  .side-wrapper > * {
+    transform: skewX(0);
+  }
+
+  .on + .right-side {
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+  .on + .right-side > .toggle-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .toggle-button {
+    z-index: 3;
+    text-align: right;
   }
 
   .wrapper .right-side {

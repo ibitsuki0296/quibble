@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <Sidebar />
+    <Sidebar :class="{'on': isActive}" />
     <div class="right-side">
-      <span class="sp-only">▼</span>
+      <span @click="toggle" class="sp-only toggle-button">▼</span>
       <h1 class="contents_h1">TOP</h1>
       <p class="lead">もし入れる必要があったらリード文</p>
       <div class="contents">
@@ -44,6 +44,12 @@ export default {
         url: '/enter',
         image: '/og_img.jpg',
       },
+      isActive: false,
+    }
+  },
+  methods: {
+    toggle(){
+      this.isActive = !this.isActive
     }
   },
   async asyncData({ $content, params }){
